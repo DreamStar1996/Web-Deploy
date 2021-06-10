@@ -523,6 +523,795 @@ div.rightlistBox .rs2.fixed {
 
 
 
+
+
+
+
+
+
+/*********头部导航栏********/
+
+/*头部导航栏盒子*/
+.headBack {
+  width: 100%;
+  background: rgba(40, 42, 44, 0.6);
+  /*margin-bottom:30px;*/
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.headBox li.is-active {
+  /*background: #48456C;*/
+  background: rgba(73, 69, 107, 0.7);
+}
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+  border-bottom: none !important;
+}
+.headBox .el-menu {
+  background: transparent;
+  border-bottom: none !important;
+}
+.headBox .el-menu-demo li.el-menu-item,
+.headBox .el-menu--horizontal .el-submenu .el-submenu__title {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: none !important;
+}
+.headBox .el-submenu li.el-menu-item {
+  height: 38px;
+  line-height: 38px;
+}
+.headBox li .fa-wa {
+  vertical-align: baseline;
+}
+.headBox ul li.el-menu-item,
+.headBox ul li.el-menu-item.is-active,
+.headBox ul li.el-menu-item:hover,
+.headBox .el-submenu div.el-submenu__title,
+.headBox .el-submenu__title i.el-submenu__icon-arrow {
+  color: #fff;
+}
+.headBox .el-menu--horizontal .el-submenu>.el-menu {
+  top: 38px;
+  border: none;
+  padding: 0;
+}
+.headBox>ul li.el-menu-item:hover,
+.headBox>ul li.el-submenu:hover .el-submenu__title {
+  background: #48456C;
+  border-bottom: none;
+}
+.headBox>ul .el-submenu .el-menu,
+.headBox>ul .el-submenu .el-menu .el-menu-item {
+  background: #48456C;
+}
+.headBox>ul .el-submenu .el-menu .el-menu-item {
+  min-width: 0;
+}
+.headBox>ul .el-submenu .el-menu .el-menu-item:hover {
+  background: #64609E;
+}
+
+/*pc搜索框*/
+.headBox .pcsearchbox {
+  padding: 0;
+  max-width: 170px;
+  /*min-width: 30px;*/
+  height: 100%;
+  line-height: 38px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.headBox .pcsearchbox:hover .pcsearchinput {
+  opacity: 1;
+  /*transform: scaleX(1);*/
+  visibility: visible;
+}
+.headBox .pcsearchbox i.pcsearchicon {
+  color: #fff;
+  padding-left: 10px;
+}
+.headBox .pcsearchbox .pcsearchinput {
+  width: 180px;
+  padding: 10px 20px 10px 20px;
+  background: rgba(40, 42, 44, 0.6);
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  right: 0;
+  top: 38px;
+  opacity: 0;
+  visibility: hidden;
+  /*transform: scaleX(0);*/
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.headBox .pcsearchbox .hasSearched {
+  opacity: 1;
+  /*transform: scaleX(1);*/
+  visibility: visible;
+}
+.headBox .pcsearchbox .el-input {
+  width: 100%;
+}
+.headBox .el-input__inner {
+  height: 30px;
+  border: none;
+  background: #fff;
+  /*border: 1px solid #333;*/
+  border-radius: 2px;
+  padding-right: 10px;
+}
+.headBox .userInfo {
+  height: 100%;
+  line-height: 38px;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  color: #fff;
+}
+.headBox .userInfo a {
+  color: #fff;
+  font-size: 13px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.headBox .userInfo a:hover {
+  color: #48456C;
+}
+.headBox .nologin {
+  text-align: right;
+}
+.headBox .haslogin {
+  text-align: right;
+  position: relative;
+  min-width: 80px;
+  cursor: pointer;
+}
+.headBox .haslogin:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.headBox .haslogin ul {
+  background: rgba(40, 42, 44, 0.6);
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.headBox .haslogin ul li {
+  border-bottom: 1px solid #48456C;
+}
+.headBox .haslogin ul li:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+/*******移动端*******/
+.mobileBox {
+  position: relative;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+}
+.hideMenu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 38px;
+}
+.hideMenu ul.mlistmenu {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .12), 0 0 8px 0 rgba(0, 0, 0, .04);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .12), 0 0 8px 0 rgba(0, 0, 0, .04);
+  background: #48456C;
+  color: #fff;
+  border-right: none;
+}
+.hideMenu .el-submenu .el-menu {
+  background: #64609E;
+}
+.hideMenu .el-menu-item,
+.hideMenu .el-submenu__title {
+  color: #fff;
+}
+.hideMenu>i {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.hideMenu .el-menu-item,
+.el-submenu__title {
+  height: 40px;
+  line-height: 40px;
+}
+.mobileBox .searchBox {
+  padding-left: 40px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.mobileBox .searchBox .el-input__inner {
+  display: block;
+  border-radius: 2px;
+  border: none;
+  height: 25px;
+}
+.hideMenu ul.mlistmenu.pshow {
+  display: block;
+}
+.hideMenu ul.mlistmenu .el-submenu__icon-arrow,
+.mobileBox li.el-menu-item a {
+  color: #fff;
+}
+.hideMenu>ul li.el-menu-item:hover,
+.hideMenu>ul li.el-menu-item.is-active {
+  background: #48576a;
+}
+@-webkit-keyframes b {
+0% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+}
+80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px)
+}
+90% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px)
+}
+to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+}
+@keyframes b {
+0% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+}
+80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px)
+}
+90% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px)
+}
+to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+}
+.saying:after {
+  content: "|";
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  /*line-height: 0;*/
+  display: inline-block;
+  vertical-align: baseline;
+  opacity: 1;
+  text-shadow: 1px 1px 0 #ff3f1a, -1px -1px 0 #00a7e0;
+  -webkit-animation: caret 500ms infinite;
+          animation: caret 500ms infinite;
+}
+@-webkit-keyframes caret {
+0%,
+  100% {
+    opacity: 1;
+}
+50% {
+    opacity: 0;
+}
+}
+@keyframes caret {
+0%,
+  100% {
+    opacity: 1;
+}
+50% {
+    opacity: 0;
+}
+}
+.star {
+  font-family: "Microsoft YaHei";
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  line-height: 1.5;
+  background-color: #212121;
+  font-size: 14px;
+  overflow: hidden;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #212121;
+}
+.fixed {
+  position: fixed;
+  top: -60%;
+}
+#startrack {
+  height: 140%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.cover {
+  position: absolute;
+  bottom: -42%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #212121;
+}
+.intro {
+  color: #fff;
+  height: 100%;
+  overflow-y: hidden;
+  /* max-height: 900px; */
+  padding: 0;
+  animation: fadedown 1s cubic-bezier(.19, 1, .22, 1);
+  -webkit-animation: fadedown 1s cubic-bezier(.19, 1, .22, 1);
+  -ms-animation: fadedown 1s cubic-bezier(.19, 1, .22, 1);
+  -moz-animation: fadedown 1s cubic-bezier(.19, 1, .22, 1);
+}
+@-webkit-keyframes fadedown {
+0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+}
+@keyframes fadedown {
+0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+}
+.intro .container {
+  animation: fadedown 3.5s cubic-bezier(.19, 1, .22, 1);
+  -webkit-animation: fadedown 3.5s cubic-bezier(.19, 1, .22, 1);
+  -ms-animation: fadedown 3.5s cubic-bezier(.19, 1, .22, 1);
+  -moz-animation: fadedown 3.5s cubic-bezier(.19, 1, .22, 1);
+}
+
+/* 碰上两个container同步，则让它们在自己的div引用层实现各自功能不必同步 */
+.star .container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 20px 0;
+}
+.hello {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+}
+.reset-bottom {
+  bottom: 40px !important;
+}
+@media screen and (max-width: 500px) {
+.reset-bottom {
+    bottom: 20px !important;
+}
+}
+.hello .slogan {
+  font-size: 42px;
+  letter-spacing: .5em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.hello h2 {
+  padding-top: .6em;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5em;
+  letter-spacing: .2em;
+  border-bottom: none !important;
+}
+.hello .circle {
+  float: left;
+  margin-right: 10px;
+  letter-spacing: 0;
+}
+.hello .circle span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+.hello .circle span:nth-child(1) {
+  background-color: #ff493f;
+}
+.hello .circle span:nth-child(2) {
+  background-color: #f7c900;
+}
+.hello .circle span:nth-child(3) {
+  background-color: #00ff37;
+}
+
+.footBack {
+  color: #888;
+  margin-top: -10px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  min-height: 50px;
+  margin-top: -25px;
+  /*position: relative;*/
+  position: absolute;
+  /*min-height: 368px;*/
+}
+.footBack .fcontainer {
+  width: 100%;
+  background: #232323;
+  /*top:294px;*/
+  /*left:0;*/
+  /*position: absolute;*/
+  padding: 15px 10px 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*z-index: 1;*/
+  width: 100% !important;
+}
+.footBack .footer-img {
+  height: 368px;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  bottom: -74px;
+  pointer-events: none;
+}
+.footBack p {
+  margin: 5px 0;
+  z-index: 3;
+}
+.footBack a {
+  color: #795548;
+  z-index: 3;
+}
+.footBack a:hover {
+  color: #000;
+}
+
+/*心脏呼吸*/
+.footBack .fheart {
+  width: 25px;
+  height: 25px;
+  margin-top: -10px;
+  top: 5px;
+  position: relative;
+  /*padding-top:0px;*/
+  vertical-align: baseline;
+  -webkit-animation: heartScale 1.33s ease-in-out infinite;
+  animation: heartScale 1.33s ease-in-out infinite;
+}
+@keyframes heartScale {
+0% {
+    -webkit-transform: scale(1);
+            transform: scale(1)
+}
+50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8)
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1)
+}
+}
+@-webkit-keyframes heartScale {
+0% {
+    -webkit-transform: scale(1);
+            transform: scale(1)
+}
+50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8)
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1)
+}
+}
+
+/*时间跳动*/
+.timeJump {
+  animation: my-face 5s infinite ease-in-out;
+  -webkit-animation: my-face 5s infinite ease-in-out;
+  display: inline-block;
+  margin: 0 5px;
+}
+@-webkit-keyframes my-face {
+2% {
+    -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
+    transform: translate(0, 1.5px) rotate(1.5deg)
+}
+4% {
+    -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
+    transform: translate(0, -1.5px) rotate(-.5deg)
+}
+6% {
+    -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
+    transform: translate(0, 1.5px) rotate(-1.5deg)
+}
+8% {
+    -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
+    transform: translate(0, -1.5px) rotate(-1.5deg)
+}
+10% {
+    -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
+    transform: translate(0, 2.5px) rotate(1.5deg)
+}
+12% {
+    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
+    transform: translate(0, -.5px) rotate(1.5deg)
+}
+14% {
+    -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
+    transform: translate(0, -1.5px) rotate(1.5deg)
+}
+16% {
+    -webkit-transform: translate(0, -.5px) rotate(-1.5deg);
+    transform: translate(0, -.5px) rotate(-1.5deg)
+}
+18% {
+    -webkit-transform: translate(0, .5px) rotate(-1.5deg);
+    transform: translate(0, .5px) rotate(-1.5deg)
+}
+20% {
+    -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
+    transform: translate(0, -1.5px) rotate(2.5deg)
+}
+22% {
+    -webkit-transform: translate(0, .5px) rotate(-1.5deg);
+    transform: translate(0, .5px) rotate(-1.5deg)
+}
+24% {
+    -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
+    transform: translate(0, 1.5px) rotate(1.5deg)
+}
+26% {
+    -webkit-transform: translate(0, .5px) rotate(.5deg);
+    transform: translate(0, .5px) rotate(.5deg)
+}
+28% {
+    -webkit-transform: translate(0, .5px) rotate(1.5deg);
+    transform: translate(0, .5px) rotate(1.5deg)
+}
+30% {
+    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
+    transform: translate(0, -.5px) rotate(2.5deg)
+}
+32% {
+    -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
+    transform: translate(0, 1.5px) rotate(-.5deg)
+}
+34% {
+    -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
+    transform: translate(0, 1.5px) rotate(-.5deg)
+}
+36% {
+    -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
+    transform: translate(0, -1.5px) rotate(2.5deg)
+}
+38% {
+    -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
+    transform: translate(0, 1.5px) rotate(-1.5deg)
+}
+40% {
+    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
+    transform: translate(0, -.5px) rotate(2.5deg)
+}
+42% {
+    -webkit-transform: translate(0, 2.5px) rotate(-1.5deg);
+    transform: translate(0, 2.5px) rotate(-1.5deg)
+}
+44% {
+    -webkit-transform: translate(0, 1.5px) rotate(.5deg);
+    transform: translate(0, 1.5px) rotate(.5deg)
+}
+46% {
+    -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
+    transform: translate(0, -1.5px) rotate(2.5deg)
+}
+48% {
+    -webkit-transform: translate(0, -.5px) rotate(.5deg);
+    transform: translate(0, -.5px) rotate(.5deg)
+}
+50% {
+    -webkit-transform: translate(0, .5px) rotate(.5deg);
+    transform: translate(0, .5px) rotate(.5deg)
+}
+52% {
+    -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
+    transform: translate(0, 2.5px) rotate(2.5deg)
+}
+54% {
+    -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
+    transform: translate(0, -1.5px) rotate(1.5deg)
+}
+56% {
+    -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
+    transform: translate(0, 2.5px) rotate(2.5deg)
+}
+58% {
+    -webkit-transform: translate(0, .5px) rotate(2.5deg);
+    transform: translate(0, .5px) rotate(2.5deg)
+}
+60% {
+    -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
+    transform: translate(0, 2.5px) rotate(2.5deg)
+}
+62% {
+    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
+    transform: translate(0, -.5px) rotate(2.5deg)
+}
+64% {
+    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
+    transform: translate(0, -.5px) rotate(1.5deg)
+}
+66% {
+    -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
+    transform: translate(0, 1.5px) rotate(-.5deg)
+}
+68% {
+    -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
+    transform: translate(0, -1.5px) rotate(-.5deg)
+}
+70% {
+    -webkit-transform: translate(0, 1.5px) rotate(.5deg);
+    transform: translate(0, 1.5px) rotate(.5deg)
+}
+72% {
+    -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
+    transform: translate(0, 2.5px) rotate(1.5deg)
+}
+74% {
+    -webkit-transform: translate(0, -.5px) rotate(.5deg);
+    transform: translate(0, -.5px) rotate(.5deg)
+}
+76% {
+    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
+    transform: translate(0, -.5px) rotate(2.5deg)
+}
+78% {
+    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
+    transform: translate(0, -.5px) rotate(1.5deg)
+}
+80% {
+    -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
+    transform: translate(0, 1.5px) rotate(1.5deg)
+}
+82% {
+    -webkit-transform: translate(0, -.5px) rotate(.5deg);
+    transform: translate(0, -.5px) rotate(.5deg)
+}
+84% {
+    -webkit-transform: translate(0, 1.5px) rotate(2.5deg);
+    transform: translate(0, 1.5px) rotate(2.5deg)
+}
+86% {
+    -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
+    transform: translate(0, -1.5px) rotate(-1.5deg)
+}
+88% {
+    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
+    transform: translate(0, -.5px) rotate(2.5deg)
+}
+90% {
+    -webkit-transform: translate(0, 2.5px) rotate(-.5deg);
+    transform: translate(0, 2.5px) rotate(-.5deg)
+}
+92% {
+    -webkit-transform: translate(0, .5px) rotate(-.5deg);
+    transform: translate(0, .5px) rotate(-.5deg)
+}
+94% {
+    -webkit-transform: translate(0, 2.5px) rotate(.5deg);
+    transform: translate(0, 2.5px) rotate(.5deg)
+}
+96% {
+    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
+    transform: translate(0, -.5px) rotate(1.5deg)
+}
+98% {
+    -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
+    transform: translate(0, -1.5px) rotate(-.5deg)
+}
+0%,
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0)
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*********头部导航栏********/
 
 /*头部导航栏盒子*/
@@ -895,303 +1684,6 @@ to {
 }
 50% {
     opacity: 0;
-}
-}
-
-.footBack {
-  color: #888;
-  margin-top: -10px;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
-  width: 100%;
-  min-height: 50px;
-  margin-top: -25px;
-  /*position: relative;*/
-  position: absolute;
-  /*min-height: 368px;*/
-}
-.footBack .fcontainer {
-  width: 100%;
-  background: #232323;
-  /*top:294px;*/
-  /*left:0;*/
-  /*position: absolute;*/
-  padding: 15px 10px 10px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /*z-index: 1;*/
-  width: 100% !important;
-}
-.footBack .footer-img {
-  height: 368px;
-  z-index: 1;
-  position: relative;
-  width: 100%;
-  bottom: -74px;
-  pointer-events: none;
-}
-.footBack p {
-  margin: 5px 0;
-  z-index: 3;
-}
-.footBack a {
-  color: #795548;
-  z-index: 3;
-}
-.footBack a:hover {
-  color: #000;
-}
-
-/*心脏呼吸*/
-.footBack .fheart {
-  width: 25px;
-  height: 25px;
-  margin-top: -10px;
-  top: 5px;
-  position: relative;
-  /*padding-top:0px;*/
-  vertical-align: baseline;
-  -webkit-animation: heartScale 1.33s ease-in-out infinite;
-  animation: heartScale 1.33s ease-in-out infinite;
-}
-@keyframes heartScale {
-0% {
-    -webkit-transform: scale(1);
-            transform: scale(1)
-}
-50% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8)
-}
-100% {
-    -webkit-transform: scale(1);
-            transform: scale(1)
-}
-}
-@-webkit-keyframes heartScale {
-0% {
-    -webkit-transform: scale(1);
-            transform: scale(1)
-}
-50% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8)
-}
-100% {
-    -webkit-transform: scale(1);
-            transform: scale(1)
-}
-}
-
-/*时间跳动*/
-.timeJump {
-  animation: my-face 5s infinite ease-in-out;
-  -webkit-animation: my-face 5s infinite ease-in-out;
-  display: inline-block;
-  margin: 0 5px;
-}
-@-webkit-keyframes my-face {
-2% {
-    -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
-    transform: translate(0, 1.5px) rotate(1.5deg)
-}
-4% {
-    -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-    transform: translate(0, -1.5px) rotate(-.5deg)
-}
-6% {
-    -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
-    transform: translate(0, 1.5px) rotate(-1.5deg)
-}
-8% {
-    -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
-    transform: translate(0, -1.5px) rotate(-1.5deg)
-}
-10% {
-    -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
-    transform: translate(0, 2.5px) rotate(1.5deg)
-}
-12% {
-    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-    transform: translate(0, -.5px) rotate(1.5deg)
-}
-14% {
-    -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
-    transform: translate(0, -1.5px) rotate(1.5deg)
-}
-16% {
-    -webkit-transform: translate(0, -.5px) rotate(-1.5deg);
-    transform: translate(0, -.5px) rotate(-1.5deg)
-}
-18% {
-    -webkit-transform: translate(0, .5px) rotate(-1.5deg);
-    transform: translate(0, .5px) rotate(-1.5deg)
-}
-20% {
-    -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
-    transform: translate(0, -1.5px) rotate(2.5deg)
-}
-22% {
-    -webkit-transform: translate(0, .5px) rotate(-1.5deg);
-    transform: translate(0, .5px) rotate(-1.5deg)
-}
-24% {
-    -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
-    transform: translate(0, 1.5px) rotate(1.5deg)
-}
-26% {
-    -webkit-transform: translate(0, .5px) rotate(.5deg);
-    transform: translate(0, .5px) rotate(.5deg)
-}
-28% {
-    -webkit-transform: translate(0, .5px) rotate(1.5deg);
-    transform: translate(0, .5px) rotate(1.5deg)
-}
-30% {
-    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-    transform: translate(0, -.5px) rotate(2.5deg)
-}
-32% {
-    -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-    transform: translate(0, 1.5px) rotate(-.5deg)
-}
-34% {
-    -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-    transform: translate(0, 1.5px) rotate(-.5deg)
-}
-36% {
-    -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
-    transform: translate(0, -1.5px) rotate(2.5deg)
-}
-38% {
-    -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
-    transform: translate(0, 1.5px) rotate(-1.5deg)
-}
-40% {
-    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-    transform: translate(0, -.5px) rotate(2.5deg)
-}
-42% {
-    -webkit-transform: translate(0, 2.5px) rotate(-1.5deg);
-    transform: translate(0, 2.5px) rotate(-1.5deg)
-}
-44% {
-    -webkit-transform: translate(0, 1.5px) rotate(.5deg);
-    transform: translate(0, 1.5px) rotate(.5deg)
-}
-46% {
-    -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
-    transform: translate(0, -1.5px) rotate(2.5deg)
-}
-48% {
-    -webkit-transform: translate(0, -.5px) rotate(.5deg);
-    transform: translate(0, -.5px) rotate(.5deg)
-}
-50% {
-    -webkit-transform: translate(0, .5px) rotate(.5deg);
-    transform: translate(0, .5px) rotate(.5deg)
-}
-52% {
-    -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
-    transform: translate(0, 2.5px) rotate(2.5deg)
-}
-54% {
-    -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
-    transform: translate(0, -1.5px) rotate(1.5deg)
-}
-56% {
-    -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
-    transform: translate(0, 2.5px) rotate(2.5deg)
-}
-58% {
-    -webkit-transform: translate(0, .5px) rotate(2.5deg);
-    transform: translate(0, .5px) rotate(2.5deg)
-}
-60% {
-    -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
-    transform: translate(0, 2.5px) rotate(2.5deg)
-}
-62% {
-    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-    transform: translate(0, -.5px) rotate(2.5deg)
-}
-64% {
-    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-    transform: translate(0, -.5px) rotate(1.5deg)
-}
-66% {
-    -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-    transform: translate(0, 1.5px) rotate(-.5deg)
-}
-68% {
-    -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-    transform: translate(0, -1.5px) rotate(-.5deg)
-}
-70% {
-    -webkit-transform: translate(0, 1.5px) rotate(.5deg);
-    transform: translate(0, 1.5px) rotate(.5deg)
-}
-72% {
-    -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
-    transform: translate(0, 2.5px) rotate(1.5deg)
-}
-74% {
-    -webkit-transform: translate(0, -.5px) rotate(.5deg);
-    transform: translate(0, -.5px) rotate(.5deg)
-}
-76% {
-    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-    transform: translate(0, -.5px) rotate(2.5deg)
-}
-78% {
-    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-    transform: translate(0, -.5px) rotate(1.5deg)
-}
-80% {
-    -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
-    transform: translate(0, 1.5px) rotate(1.5deg)
-}
-82% {
-    -webkit-transform: translate(0, -.5px) rotate(.5deg);
-    transform: translate(0, -.5px) rotate(.5deg)
-}
-84% {
-    -webkit-transform: translate(0, 1.5px) rotate(2.5deg);
-    transform: translate(0, 1.5px) rotate(2.5deg)
-}
-86% {
-    -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
-    transform: translate(0, -1.5px) rotate(-1.5deg)
-}
-88% {
-    -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-    transform: translate(0, -.5px) rotate(2.5deg)
-}
-90% {
-    -webkit-transform: translate(0, 2.5px) rotate(-.5deg);
-    transform: translate(0, 2.5px) rotate(-.5deg)
-}
-92% {
-    -webkit-transform: translate(0, .5px) rotate(-.5deg);
-    transform: translate(0, .5px) rotate(-.5deg)
-}
-94% {
-    -webkit-transform: translate(0, 2.5px) rotate(.5deg);
-    transform: translate(0, 2.5px) rotate(.5deg)
-}
-96% {
-    -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-    transform: translate(0, -.5px) rotate(1.5deg)
-}
-98% {
-    -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-    transform: translate(0, -1.5px) rotate(-.5deg)
-}
-0%,
-  100% {
-    -webkit-transform: translate(0, 0) rotate(0);
-    transform: translate(0, 0) rotate(0)
 }
 }
 /*分享标题*/
@@ -3065,130 +3557,183 @@ video {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*登录注册标题*/
-.loginTitle{
-    text-align: center;
-    font-size: 26px;
-    padding-top:50px;
-    margin-bottom: 20px;
+.loginTitle {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 50px;
+  margin-bottom: 20px;
 }
-.loginBox ,.registerBox{
-    background: #fff;
-    padding:40px;
-    max-width:320px;
-    margin:0 auto;
+.loginBox,
+.registerBox {
+  background: #fff;
+  padding: 40px;
+  max-width: 320px;
+  margin: 0 auto;
 }
-.loginBox{
-    padding-bottom:0;
+.loginBox {
+  padding-bottom: 0;
 }
-.lr-title{
-    position: relative;
-    height:32px;
-    line-height: 32px;
-    margin-bottom: 20px;
+.lr-title {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 20px;
 }
-.lr-title h1{
-    font-size: 24px;
-    color:#666;
-    font-weight: bold;
-    /*width:50%;*/
+.lr-title h1 {
+  font-size: 24px;
+  color: #666;
+  font-weight: bold;
+  /*width:50%;*/
 }
-.lr-title p{
-    font-size: 12px;
-    color:#999;
-    position: absolute;
-    right:0;
-    top:0;
+.lr-title p {
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-.lr-btn{
-    color:#fff;
-    text-align: center;
-    letter-spacing: 5px;
-    padding:8px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 30px;
+.lr-btn {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
 }
-.loginBox .el-input,.registerBox .el-input{
-    margin-bottom: 20px;
+.loginBox .el-input,
+.registerBox .el-input {
+  margin-bottom: 20px;
 }
-.loginBox .el-alert ,.registerBox .el-alert{
-    top:-18px;
-    background-color: #888;
+.loginBox .el-alert,
+.registerBox .el-alert {
+  top: -18px;
+  background-color: #888;
 }
-.loginBox .el-input input,.registerBox .el-input input{
-    border-radius: 4px;
+.loginBox .el-input input,
+.registerBox .el-input input {
+  border-radius: 4px;
 }
-.loginBox h3,.registerBox h3{
-    text-align: right;
-    margin-bottom: 20px;
+.loginBox h3,
+.registerBox h3 {
+  text-align: right;
+  margin-bottom: 20px;
 }
-.loginBox h3 a,.registerBox h3 a{
-    font-size: 13px;
-    color:#999;
+.loginBox h3 a,
+.registerBox h3 a {
+  font-size: 13px;
+  color: #999;
 }
-.loginBox .otherLogin{
-    max-width:320px;
-    padding:30px 40px;
-    background: #ddd;
-    text-align: center;
-    margin-left:-40px;
-    margin-right: -40px;
-    visibility: hidden;
+.loginBox .otherLogin {
+  max-width: 320px;
+  padding: 30px 40px;
+  background: #ddd;
+  text-align: center;
+  margin-left: -40px;
+  margin-right: -40px;
+  visibility: hidden;
 }
-.loginBox .otherLogin p{
-    margin-bottom:20px;
-    font-size: 16px;
+.loginBox .otherLogin p {
+  margin-bottom: 20px;
+  font-size: 16px;
 }
-.loginBox .otherLogin a i{
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    font-size: 18px;
-    border-radius: 50%;
-    color:#fff;
-    margin: 0 10px;
+.loginBox .otherLogin a i {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  border-radius: 50%;
+  color: #fff;
+  margin: 0 10px;
 }
-.loginBox .otherLogin a i.fa-wechat{
-    background: #7bc549;
+.loginBox .otherLogin a i.fa-wechat {
+  background: #7bc549;
 }
-.loginBox .otherLogin a i.fa-qq{
-    background: #56b6e7;
+.loginBox .otherLogin a i.fa-qq {
+  background: #56b6e7;
 }
-.loginBox .otherLogin a i.fa-weibo{
-    background: #ff763b;
+.loginBox .otherLogin a i.fa-weibo {
+  background: #ff763b;
 }
 /*登录成功*/
-.registerSuc{
-    padding: 40px;
-    margin: 0 auto;
+.registerSuc {
+  padding: 40px;
+  margin: 0 auto;
 }
-.registerSuc .sucIcon{
-    text-align: center;
-    margin-bottom: 30px;
-    padding-left:60px;
+.registerSuc .sucIcon {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-left: 60px;
 }
-.registerSuc .sucContent{
-    line-height: 1.5;
-    font-size: 15px;
-    text-align: center;
+.registerSuc .sucContent {
+  line-height: 1.5;
+  font-size: 15px;
+  text-align: center;
 }
-.registerSuc .sucContent p{
-    margin-top: 10px;
-    font-size: 13px;
-    color: #999;
+.registerSuc .sucContent p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999;
 }
-.registerSuc .sucContent .lastbtn{
-    display: inline-block;
-    font-size: 14px;
-    padding: 3px 10px;
-    border-radius: 5px;
-    color:#fff;
-    cursor: pointer;
+.registerSuc .sucContent .lastbtn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
-.registerSuc .sucContent  .el-icon-close{
-    fong-size: 13px;
+.registerSuc .sucContent .el-icon-close {
+  fong-size: 13px;
 }
 
 .userInfoBox .avatarlist{
